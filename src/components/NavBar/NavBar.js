@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CartWidget } from '../container/CartWidget/CartWidget'
+import { CartWidget } from '../CartWidget/CartWidget'
 import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 
 
