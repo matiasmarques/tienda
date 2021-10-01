@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CartWidget } from './CartWidget'
+import { CartWidget } from '../container/CartWidget/CartWidget'
 import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
 
 
@@ -10,7 +10,6 @@ export const NavBar = () => {
   
     return (
         <>
-        <div>
         <Nav pills>
         <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle nav caret>
@@ -29,7 +28,6 @@ export const NavBar = () => {
           </DropdownMenu>
         </Dropdown>
       </Nav>        
-      </div>
       </>
     )
 }
