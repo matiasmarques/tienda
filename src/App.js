@@ -5,7 +5,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 function App() {
   return (
     <>
-    <h1 className='titulo'>Mi tienda en react</h1>
+    <h1 className='titulo'>Concesionaria</h1>
     <NavBar />
 	  <ItemListContainer greetings="Catálogo de productos"/>
     </>
