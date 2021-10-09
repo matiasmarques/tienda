@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { CartWidget } from '../CartWidget/CartWidget'
-import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu } from 'reactstrap';
+import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavbarBrand } from 'reactstrap';
 
 
 export const NavBar = () => {
@@ -11,11 +11,12 @@ export const NavBar = () => {
     return (
         <>
         <Nav pills>
+        <NavbarBrand>Concesionaria</NavbarBrand>
         <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle nav caret>
             Menu
           </DropdownToggle>
-          <DropdownMenu right>
+          <DropdownMenu>
             <DropdownItem header>Mi tienda</DropdownItem>
             <DropdownItem divider />
             <DropdownItem href="#">Articulos</DropdownItem>
