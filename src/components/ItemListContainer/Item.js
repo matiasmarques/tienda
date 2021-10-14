@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import {
     Card, CardImg, CardText, CardBody,
     CardTitle, Button
   } from 'reactstrap';
 
 
-export const Item = ( {id, auto, precio, img, motor, potencia} ) => {
+export const Item = ( {id, auto, precio, img, motor, potencia, categoria} ) => {
 
     return (
 
@@ -16,7 +17,10 @@ export const Item = ( {id, auto, precio, img, motor, potencia} ) => {
                 <CardText>Motor: {motor}</CardText>
                 <CardText>Potencia: {potencia} CV</CardText>
                 <CardText>Precio: USD{precio}</CardText>
-                <Button>Reservar</Button>
+                <CardText>Categoria: {categoria}</CardText>
+                <Link to={`/detail/${id}`}> 
+                    <Button>Reservar</Button>
+                </Link>
             </CardBody>
         </Card>
     )

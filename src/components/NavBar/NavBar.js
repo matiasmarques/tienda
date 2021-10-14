@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { CartWidget } from '../CartWidget/CartWidget'
-import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavbarBrand } from 'reactstrap';
+import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavbarBrand, UncontrolledDropdown } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 export const NavBar = () => {
@@ -11,21 +12,28 @@ export const NavBar = () => {
     return (
         <>
         <Nav pills>
-        <NavbarBrand>Concesionaria</NavbarBrand>
+        <NavbarBrand href="./">Concesionaria</NavbarBrand>
         <Dropdown nav isOpen={dropdownOpen} toggle={toggle}>
           <DropdownToggle nav caret>
             Menu
           </DropdownToggle>
-          <DropdownMenu>
+          <DropdownMenu right>
             <DropdownItem header>Mi tienda</DropdownItem>
             <DropdownItem divider />
-            <DropdownItem href="#">Articulos</DropdownItem>
+            <UncontrolledDropdown>
+              <DropdownToggle>
+                Categorias
+              </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem href="./auto/Deportivo">Deportivo</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem href="./auto/Diario">Diario</DropdownItem>
+            </DropdownMenu>
+            </UncontrolledDropdown>
             <DropdownItem divider />
-            <DropdownItem href="#">Compras</DropdownItem>
+            <DropdownItem href="./MiCuenta">Mi cuenta</DropdownItem>
             <DropdownItem divider />
-            <DropdownItem href="#">Mi cuenta</DropdownItem>
-            <DropdownItem divider />
-            <CartWidget/>
+            <Link to="./cart"><CartWidget/></Link>
           </DropdownMenu>
         </Dropdown>
       </Nav>        
