@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { CartWidget } from '../CartWidget/CartWidget'
 import { Nav, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavbarBrand, UncontrolledDropdown } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { CartScreen } from '../CartScreen/CartScreen';
 
 
 export const NavBar = () => {
@@ -33,7 +34,7 @@ export const NavBar = () => {
             <DropdownItem divider />
             <DropdownItem href="./MiCuenta">Mi cuenta</DropdownItem>
             <DropdownItem divider />
-            <Link to="./cart"><CartWidget/></Link>
+            <Link to="./cart"><CartWidget><CartScreen/> </CartWidget></Link>
           </DropdownMenu>
         </Dropdown>
       </Nav>        
