@@ -1,4 +1,3 @@
-import './App.css';
 import { NavBar } from './components/NavBar/NavBar';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter,Route,Switch,Redirect } from 'react-router-dom'

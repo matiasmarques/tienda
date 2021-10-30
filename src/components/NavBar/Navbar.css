@@ -1,0 +1,32 @@
+@media (min-width:768px) {#navbar{
+    position: absolute;
+    top: 0%;
+    left:90%;
+}
+#tituloNav{
+    text-align: center;
+    position: absolute;
+    top: 0%;
+    left:45%;
+    font-size: 30px;
+    margin-bottom: 10px;
+
+}}
+
+
+@media (max-width:400px){
+    #navbar{
+        position: absolute;
+        top: 0%;
+        left:70%;
+    }
+    #tituloNav{
+        text-align: center;
+        position: absolute;
+        top: 0%;
+        left:15%;
+        font-size: 25px;
+        margin-bottom: 10px;
+        }
+
+}

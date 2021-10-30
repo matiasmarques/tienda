@@ -26,6 +26,11 @@ export const ItemDetail = ({ id, auto, precio, img, motor, potencia, categoria, 
         }
     }
 
+    const styles = {
+        btnAgregar: isInCart(id) ? "btn btn-danger m-2" : "btn btn-success m-2",
+        btnTerminar: `btn btn-success ${!isInCart(id) && "desactivado"}`
+    }
+
     return (
         <div>
             <h2>{auto}</h2>
@@ -34,21 +39,22 @@ export const ItemDetail = ({ id, auto, precio, img, motor, potencia, categoria, 
             <p>{potencia}</p>
             <h3>Precio: ${precio}</h3>
 
+            <div className={isInCart(id) && "desactivado"}>
+                <ItemCount cantidad={cantidad} modify={setCantidad} max={stock}/>
+                <button
+                    disabled={cantidad === 0}
+                    className={styles.btnAgregar}
+                    onClick={handleAgregar}
+                    >
+                    Agregar al carrito
+                </button>
+            </div>
+
+            <Link to="/cart" className={styles.btnTerminar}>Terminar mi compra</Link>
             <button className="btn btn-primary" onClick={() => goBack()}>
                 Volver
             </button>
-            { isInCart(id) ? <Link to="/cart" className="btn btn-success">Finalizar compra</Link>
-                :
-                    <>
-                        <ItemCount cantidad={cantidad} modify={setCantidad} max={stock}/>
-                        <button
-                            className="btn btn-success my-2"
-                            onClick={handleAgregar}
-                            >
-                            Agregar
-                        </button>
-                    </>
-            }
+            <br/>
 
             <button onClick={() => push("/")}>
                 Volver al inicio
