@@ -6,11 +6,12 @@ import { CartScreen } from '../CartScreen/CartScreen';
 import './Navbar.css'
 
 
+
 export const NavBar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const toggle = () => setDropdownOpen(!dropdownOpen);
-  
+
     return (
         <>
         <Nav pills>
@@ -27,9 +28,13 @@ export const NavBar = () => {
                 Categorias
               </DropdownToggle>
             <DropdownMenu>
-              <DropdownItem href="../auto/Deportivo">Deportivo</DropdownItem>
+            <Link to='/auto/Deportivo'>
+              <DropdownItem>Deportivo</DropdownItem>
+            </Link>
               <DropdownItem divider />
-              <DropdownItem href="../auto/Diario">Diario</DropdownItem>
+            <Link to='/auto/Diario'>
+              <DropdownItem>Diario</DropdownItem>
+            </Link>
             </DropdownMenu>
             </UncontrolledDropdown>
             <DropdownItem divider />

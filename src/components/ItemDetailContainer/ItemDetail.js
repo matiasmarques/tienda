@@ -35,8 +35,8 @@ export const ItemDetail = ({ id, auto, precio, img, motor, potencia, categoria, 
         <div>
             <h2>{auto}</h2>
             <img src={img} alt={auto}/>
-            <p>{motor}</p>
-            <p>{potencia}</p>
+            <p>Motor: {motor}</p>
+            <p>Potencia: {potencia}</p>
             <h3>Precio: ${precio}</h3>
 
             <div className={isInCart(id) && "desactivado"}>

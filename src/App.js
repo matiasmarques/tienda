@@ -4,6 +4,7 @@ import { BrowserRouter,Route,Switch,Redirect } from 'react-router-dom'
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './context/CartContext';
 import { CartScreen } from './components/CartScreen/CartScreen';
+import { Checkout } from './components/Checkout/Checkout';
 
 
 function App() {
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route exact path="/cart">
             <CartScreen/>
+          </Route>
+          <Route exact path="/checkout">
+            <Checkout/>
           </Route>
           <Route path="*">
               <Redirect to="/"/>
