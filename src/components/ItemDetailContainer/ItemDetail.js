@@ -55,8 +55,9 @@ export const ItemDetail = ({ id, auto, precio, img, motor, potencia, categoria, 
                 Volver
             </button>
             <br/>
+            <br/>
 
-            <button onClick={() => push("/")}>
+            <button type="button" class="btn btn-secondary" onClick={() => push("/")}>
                 Volver al inicio
             </button>
         </div>

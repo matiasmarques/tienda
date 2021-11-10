@@ -10,7 +10,7 @@ export const Item = ( {id, auto, precio, img, motor, potencia, categoria} ) => {
 
     return (
 
-        <Card style={{ width: '18rem' }} className="m-3">
+        <Card style={{ width: '20rem' }} className="m-3">
             <CardBody>
                 <CardImg top width= "100%" src={img} />
                 <CardTitle tag= "h4">{auto}</CardTitle>
@@ -19,7 +19,7 @@ export const Item = ( {id, auto, precio, img, motor, potencia, categoria} ) => {
                 <CardText>Precio: USD{precio}</CardText>
                 <CardText>Categoria: {categoria}</CardText>
                 <Link to={`/detail/${id}`}> 
-                    <Button>Reservar</Button>
+                    <Button>Comprar</Button>
                 </Link>
             </CardBody>
         </Card>

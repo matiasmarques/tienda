@@ -25,19 +25,36 @@ export const Checkout = () => {
         e.preventDefault()
 
         if (values.nombre.length < 3) {
-            alert("Nombre inválido")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Nombre inválido',
+              })
             return
         }
         if (values.apellido.length < 3) {
-            alert("Apellido inválido")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Apellido inválido',
+              })
             return
         }
         if (values.email.length < 3) {
-            alert("Email inválido")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Email inválido',
+              })
             return
         }
         if (values.tel.length < 7) {
-            alert("Teléfono inválido")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Teléfono inválido',
+              })
+              
             return
         }
 
@@ -112,6 +129,8 @@ export const Checkout = () => {
                         onChange={handleInputChange}
                     />
                     {values.tel.length === 0 && <small>Este campo es obligatorio</small>}
+                    <br/>
+                    <br/>
 
                     <button className="btn btn-success" type="submit">Finalizar</button>
                 </form>

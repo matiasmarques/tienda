@@ -11,8 +11,14 @@
 @media (min-width:768px) {
     .producto{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    align-items: left;
     flex-direction: row;
     padding: 0 30px;
 }}
+
+#spinner{
+    position: absolute;    
+    left: 500px;
+    top: 100px;
+}

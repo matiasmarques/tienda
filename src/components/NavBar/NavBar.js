@@ -15,6 +15,7 @@ export const NavBar = () => {
     return (
         <>
         <Nav pills>
+          <br/>
         <NavbarBrand href="./" id='tituloNav'>Concesionaria</NavbarBrand>
         <Dropdown nav isOpen={dropdownOpen} toggle={toggle} id='navbar'>
           <DropdownToggle nav caret>
