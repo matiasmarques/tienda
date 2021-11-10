@@ -27,7 +27,7 @@ export const ItemDetail = ({ id, auto, precio, img, motor, potencia, categoria, 
     }
 
     const styles = {
-        btnAgregar: isInCart(id) ? "btn btn-danger m-2" : "btn btn-success m-2",
+        btnAgregar: isInCart(id) ? "btn btn-danger" : "btn btn-success",
         btnTerminar: `btn btn-success ${!isInCart(id) && "desactivado"}`
     }
 
@@ -41,6 +41,7 @@ export const ItemDetail = ({ id, auto, precio, img, motor, potencia, categoria, 
 
             <div className={isInCart(id) && "desactivado"}>
                 <ItemCount cantidad={cantidad} modify={setCantidad} max={stock}/>
+                <br/>
                 <button
                     disabled={cantidad === 0}
                     className={styles.btnAgregar}
@@ -49,7 +50,7 @@ export const ItemDetail = ({ id, auto, precio, img, motor, potencia, categoria, 
                     Agregar al carrito
                 </button>
             </div>
-
+            <br/>
             <Link to="/cart" className={styles.btnTerminar}>Terminar mi compra</Link>
             <button className="btn btn-primary" onClick={() => goBack()}>
                 Volver
